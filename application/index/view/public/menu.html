@@ -1,0 +1,69 @@
+<div class="side-menu sidebar-inverse">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="side-menu-container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <div class="icon fa fa-paper-plane"></div>
+                    <div class="title">后台管理中心</div>
+                </a>
+                <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                    <i class="fa fa-times icon"></i>
+                </button>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="{:url('Index/index')}">
+                        <span class="icon fa fa-tachometer"></span><span class="title">报表统计</span>
+                    </a>
+                </li>
+                <li class="panel panel-default dropdown">
+                    <a href="{:url('Accounts/aliveAccounts')}">
+                        <span class="icon fa fa-tachometer"></span><span class="title">在线列表</span>
+                    </a>
+                </li>
+                <li class="panel panel-default dropdown">
+                    <a data-toggle="collapse" href="#dropdown-table">
+                        <span class="icon fa fa-table"></span><span class="title">账号管理</span>
+                    </a>
+                    <!-- Dropdown level 1 -->
+                    <div id="dropdown-table" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                                <li><a href="{:url('Accounts/AccountsList')}">账号列表</a>
+                                </li>
+                                <li><a href="{:url('Accounts/alreadyDel')}">已删账号</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="panel panel-default dropdown">
+                    <a href="{:url('Accounts/applySendScore')}">
+                        <span class="icon fa fa-thumbs-o-up"></span><span class="title">申请送分</span>
+                    </a>
+                </li>
+
+                <!-- Dropdown-->
+                <li class="panel panel-default dropdown">
+                    <a href="{:url('Accounts/operateRecord')}">
+                        <span class="icon fa fa-thumbs-o-up"></span><span class="title">操作记录</span>
+                    </a>
+                </li>
+                <!-- Dropdown-->
+                <li class="panel panel-default dropdown">
+                    <a href="">
+                        <span class="icon fa fa-thumbs-o-up"></span><span class="title">银行信息</span>
+                    </a>
+                </li>
+                <!-- Dropdown-->
+                <li class="panel panel-default dropdown">
+                    <a href="license.html">
+                        <span class="icon fa fa-thumbs-o-up"></span><span class="title">退出工具</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >免费网站模板</a></div>

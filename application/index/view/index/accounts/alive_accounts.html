@@ -1,0 +1,120 @@
+{include file="public/header"}
+{include file="public/menu"}
+<link rel="stylesheet" href="__STATIC__/css/style_table.css" type="text/css">
+
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container-fluid">
+    <div class="side-body padding-top">
+
+<div id="container">
+	<table class="zebra">
+        <thead>
+        	<tr>
+				<th>Date</th>
+				<th>Start time</th>
+                <th>Start time</th>
+				<th>End time</th>
+				<th>Name</th>
+            </tr>
+		</thead>
+        <tbody>
+        	<tr>
+            	<td>02.06.2010</td>
+                <td>10:00</td>
+                <td>10:00</td>
+                <td>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">信息按钮</button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal1">按钮</button>
+                    <button type="button" class="btn btn-info">信息按钮</button>
+                    <button type="button" class="btn btn-warning">按钮</button>
+                    <button type="button" class="btn btn-warning">警告按钮</button>
+                    <button type="button" class="btn btn-warning">警告按钮</button>
+                    <button type="button" class="btn btn-warning">警告按钮</button>
+                    <button type="button" class="btn btn-warning">警告按钮</button>
+                </td>
+                <td>Cleaning</td>
+            </tr>
+            <tr>
+            	<td>02.06.2010</td>
+                <td>12:00</td>
+                <td>12:00</td>
+                <td>15:00</td>
+                <td>Training</td>
+            </tr>
+            <tr>
+            	<td>02.06.2010</td>
+                <td>15:00</td>
+                <td>15:00</td>
+                <td>17:00</td>
+                <td>Rest</td>
+            </tr>
+            <tr>
+            	<td>02.06.2010</td>
+                <td>17:00</td>
+                <td>17:00</td>
+                <td>21:00</td>
+                <td>Work</td>
+            </tr>
+            <tr>
+            	<td>02.06.2010</td>
+                <td>21:00</td>
+                <td>21:00</td>
+                <td>07:00</td>
+                <td>Sleep</td>
+            </tr>
+        </tbody>
+	</table>
+</div>
+    </div>
+</div>
+{include file="public/footer"}
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    模态框（Modal）标题
+                </h4>
+            </div>
+            <div class="modal-body">
+                在这里添加一些文本
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    模态框（Modal）标题
+                </h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="name" placeholder="请输入名称">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
