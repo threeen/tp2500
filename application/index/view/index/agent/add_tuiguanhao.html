@@ -1,73 +1,68 @@
 {include file="public/header"}
 {include file="public/menu"}
-<link rel="stylesheet" href="__STATIC__/css/style_form.css" type="text/css">
 <div class="container-fluid">
     <div class="side-body padding-top">
 
-        <!--<h1>登录表单</h1>-->
-
-        <div class="container w3layouts agileits">
-
-            <div class="login w3layouts agileits">
-                <h2>新增推广号</h2>
-                <form action="#" method="post">
-                    <input type="text" Name="Userame" placeholder="用户名" required="">
-                    <input type="text" Name="Userame" placeholder="用户名" required="">
-                    <input type="text" Name="Userame" placeholder="用户名" required="">
-                    <input type="text" Name="Userame" placeholder="用户名" required="">
-                    <input type="password" Name="Password" placeholder="密码" required="">
-                    <input type="text" >
-                </form>
-                <!--<ul class="tick w3layouts agileits">-->
-                    <!--<li>-->
-                        <!--<input type="checkbox" id="brand1" value="">-->
-                        <!--<label for="brand1"><span></span>记住我</label>-->
-                    <!--</li>-->
-                <!--</ul>-->
-                <div class="send-button w3layouts agileits">
-                    <form>
-                        <input type="submit" value="确定">
-                        <input type="submit" value="取消">
-                    </form>
+        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="title">新增推广号</div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="sub-title">推广号</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input" onblur="tuiguanghao_lose_focus(this,'help-block')" maxlength="6">
+                                    <p id="p1" class="help-block" style="display: none;" value="sdf">推广号请设定6位，数字或字母均可</p>
+                                </div>
+                                <div class="sub-title">密码</div>
+                                <div>
+                                    <input type="password" class="form-control" placeholder="Text input" maxlength="16" onblur="miam_lose_focus(this,'mimayanzheng')">
+                                    <p id="p2" class="mimayanzheng" style="display: none;" >
+                                        密码最少6位,必须是数字和字母组合.字母须有大小写,不能有连续3位以上的数字.
+                                    </p>
+                                </div>
+                                <div class="sub-title">占陈比例</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                </div>
+                                <div class="sub-title">微信号</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                </div>
+                                <div class="sub-title">银行卡号</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                </div>
+                                <div class="sub-title">开户行信息</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                </div>
+                                <div class="sub-title">名字</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                </div>
+                                <div class="sub-title">电话</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                </div>
+                                <div class="sub-title">备注</div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                </div>
+                                <div class="sub-title"></div>
+                                <div>
+                                    <button type="button" class="btn btn-info">确定</button>
+                                    <button type="button" class="btn ">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--<a href="#">记住密码?</a>-->
-                <!--<div class="social-icons w3layouts agileits">-->
-                    <!--<p>- 其他方式登录 -</p>-->
-                    <!--<ul>-->
-                        <!--<li class="qq"><a href="#">-->
-                            <!--<span class="icons w3layouts agileits"></span>-->
-                            <!--<span class="text w3layouts agileits">QQ</span></a></li>-->
-                        <!--<li class="weixin w3ls"><a href="#">-->
-                            <!--<span class="icons w3layouts"></span>-->
-                            <!--<span class="text w3layouts agileits">微信</span></a></li>-->
-                        <!--<li class="weibo aits"><a href="#">-->
-                            <!--<span class="icons agileits"></span>-->
-                            <!--<span class="text w3layouts agileits">微博</span></a></li>-->
-                        <!--<div class="clear"> </div>-->
-                    <!--</ul>-->
-                <!--</div>-->
-                <div class="clear"></div>
-            </div><div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
-            <!--<div class="register w3layouts agileits">-->
-                <!--<h2>注 册</h2>-->
-                <!--<form action="#" method="post">-->
-                    <!--<input type="text" Name="Name" placeholder="用户名" required="">-->
-                    <!--<input type="text" Name="Email" placeholder="邮箱" required="">-->
-                    <!--<input type="password" Name="Password" placeholder="密码" required="">-->
-                    <!--<input type="text" Name="Phone Number" placeholder="手机号码" required="">-->
-                <!--</form>-->
-                <!--<div class="send-button w3layouts agileits">-->
-                    <!--<form>-->
-                        <!--<input type="submit" value="免费注册">-->
-                    <!--</form>-->
-                <!--</div>-->
-                <!--<div class="clear"></div>-->
-            <!--</div>-->
-
-            <div class="clear"></div>
-
         </div>
-
 
     </div>
 </div>

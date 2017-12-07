@@ -3,24 +3,27 @@
 <div class="container-fluid">
     <div class="side-body padding-top">
 
+        <!--<h1>登录表单</h1>-->
+
         <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <div class="title">申请送分设定</div>
+                                    <div class="title">上下分总账</div>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form method="post" action="{:url('Accounts/applySendScore',['sure'=>1])}">
-                                <div class="sub-title">会员账号</div>
+                                <form method="post" action="{:url('Agent/up_down_accounts',['sure'=>1])}">
+                                <div class="sub-title">开始日期</div>
                                 <div>
-                                    <input type="text" name="account" class="form-control" placeholder="Text input">
+                                    <input type="text" placeholder="开始日期" required="" name="start_time" class="form-control" id="countTimestart" onfocus="selecttime(1)" value="">
                                 </div>
-                                <div class="sub-title">送多少分</div>
+                                <div class="sub-title">结束日期</div>
                                 <div>
-                                    <input type="text" name="score" class="form-control" placeholder="Text input">
+                                    <input type="text" placeholder="结束日期" required="" name="end_time" class="form-control" id="countTimestart" onfocus="selecttime(1)" value="">
+
                                 </div>
                                 <div class="sub-title"></div>
                                 <div>
@@ -36,3 +39,4 @@
     </div>
 </div>
 {include file="public/footer"}
+<script src="__STATIC__/hui/lib/My97DatePicker/WdatePicker.js"></script>

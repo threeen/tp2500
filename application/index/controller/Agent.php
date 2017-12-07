@@ -3,7 +3,7 @@ namespace app\index\controller;
 
 use think\Controller;
 
-class Agent extends Controller
+class Agent extends Base
 {
     public function add_agent()
     {
@@ -13,6 +13,22 @@ class Agent extends Controller
         return $this->fetch('index/agent/add_tuiguanhao');
     }
     public function all_accounts(){
-        return $this->fetch('index/agent/all_accounts');
+        $sure = input('sure',0,'intval');
+        if($sure==1){
+            $data = input('post.');
+
+        }else {
+            return $this->fetch('index/agent/all_accounts');
+        }
     }
+    public function up_down_accounts(){
+        $sure = input('sure',0,'intval');
+        if($sure==1){
+            $data = input('post.');
+
+        }else {
+            return $this->fetch('index/agent/up_down_accounts');
+        }
+    }
+
 }

@@ -51,14 +51,8 @@
                 </li>
                 <!-- Dropdown-->
                 <li class="panel panel-default dropdown">
-                    <a href="">
-                        <span class="icon fa fa-thumbs-o-up"></span><span class="title">银行信息</span>
-                    </a>
-                </li>
-                <!-- Dropdown-->
-                <li class="panel panel-default dropdown">
-                    <a href="license.html">
-                        <span class="icon fa fa-thumbs-o-up"></span><span class="title">退出工具</span>
+                    <a href="" data-toggle="modal" data-target="#bank_message">
+                        <span class="icon fa fa-thumbs-o-up"></span><span class="title">商城信息</span>
                     </a>
                 </li>
             </ul>
@@ -67,3 +61,51 @@
     </nav>
 </div>
 <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >免费网站模板</a></div>
+<div class="modal fade" id="bank_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    商城信息
+                </h4>
+            </div>
+            <div class="modal-body">
+                <table style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <th width="15%">玩家账号：</th><th width="85%"><input type="text" class="form-control" style="width: 100%"></th>
+                    </tr>
+                    <tr>
+                        <th width="15%">账户余额：</th><th width="85%"><input type="text" class="form-control" style="width: 100%"></th>
+                    </tr>
+                    <tr>
+                        <th width="15%">消费金额：</th><th width="85%"><input type="text" class="form-control" style="width: 100%"></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <button type="button" class="btn">50元</button><i class="class_i"></i>
+                            <button type="button" class="btn">100元</button><i class="class_i"></i>
+                            <button type="button" class="btn">500元</button><i class="class_i"></i>
+                            <button type="button" class="btn">1000元</button><i class="class_i"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <button type="button" class="btn btn-info shangfen">上分</button>
+                            <button type="button" class="btn btn-info shangfen">下分</button>
+                        </th>
+                    </tr>
+                </table>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+<style>
+    .class_i{margin-right: 60px;}
+    .shangfen{margin-right: 120px; width: 100px;}
+</style>

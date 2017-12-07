@@ -8,7 +8,8 @@
 <style>
     .search_box{ width:300px; margin-bottom: 5px; float:right; }
     .search_button{ margin-bottom: 5px; float:right;}
-    .ceil_nav{margin-bottom: 5px; float: left;}
+    .ceil_nav{margin-bottom: 5px; float: left; }
+    .ceil_nav li a{color: #0c0c0c;}
     .ceil{margin-bottom: 5px;}
 </style>
 <style>
@@ -52,9 +53,8 @@
                 <li><a href="{:url('Agent/add_agent')}">新增代理</a></li>
                 <li><a href="{:url('Agent/add_tuiguanhao')}">新增推广号</a></li>
                 <li><a href="{:url('Agent/all_accounts')}">代理总账</a></li>
-                <li><a href="{:url('Agent/add_agent')}">上下分总账</a></li>
-                <li><a href="{:url('Agent/add_agent')}">上下分总账</a></li>
-                <li><a href="{:url('Agent/add_agent')}">刷新代理列表</a></li>
+                <li><a href="{:url('Agent/up_down_accounts')}">上下分总账</a></li>
+                <li><a href="#">刷新代理列表</a></li>
             </ul>
         </div>
     </div>
@@ -69,64 +69,90 @@
 	<table class="zebra">
         <thead>
         	<tr>
-				<th>Date</th>
-				<th>Start time</th>
-                <th>Start time</th>
-				<th>End time</th>
-				<th>Name</th>
+				<th>#</th>
+				<th>账号</th>
+                <th>是否推广号</th>
+				<th>占成比例%</th>
+				<th>操作</th>
+                <th>备注</th>
             </tr>
 		</thead>
         <tbody>
         	<tr>
-            	<td>02.06.2010</td>
+            	<td>1</td>
                 <td>10:00</td>
+                <td><span class="label label-success radius">yes</span></td>
                 <td>10:00</td>
                 <td>
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">信息按钮</button>
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal1">按钮</button>
-                    <button type="button" class="btn btn-info">信息按钮</button>
-                    <button type="button" class="btn btn-warning">按钮</button>
-                    <button type="button" class="btn btn-warning">警告按钮</button>
-                    <button type="button" class="btn btn-warning">警告按钮</button>
-                    <button type="button" class="btn btn-warning">警告按钮</button>
-                    <button type="button" class="btn btn-warning">警告按钮</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/gongnengsheding',['id'=>1])}','500','300')">功能设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/zhucesongsheding',['id'=>1])}','500','500')">注册送设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/duanxinsongsheding',['id'=>1])}','500','500')">短信送设定</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/tongji',['id'=>1])}','500','300')">统计</button>
+                    <a href="{:url('Accounts/chazhang')}"><button type="button" class="btn btn-warning">查账</button></a>
+                    <a href="{:url('Accounts/quxian')}"><button type="button" class="btn btn-warning">曲线</button></a>
+                    <button type="button" class="btn btn-warning" onclick="member_del('{:url('user/deleteUser',['id'=>1,'status'=>-1])}')">禁用</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/xiugaimima',['id'=>1])}','500','300')">修改密码</button>
                 </td>
-                <td>Cleaning</td>
+                    <td><button type="button" class="btn" onclick="member_edit('编辑','{:url('Accounts/tableedit',['id'=>1])}','500','250')">N/A</button></td>
             </tr>
             <tr>
-            	<td>02.06.2010</td>
-                <td>12:00</td>
-                <td>12:00</td>
-                <td>15:00</td>
-                <td>Training</td>
+                <td>1</td>
+                <td>10:00</td>
+                <td><span class="label label-success radius">yes</span></td>
+                <td>10:00</td>
+                <td>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/gongnengsheding',['id'=>1])}','500','300')">功能设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/zhucesongsheding',['id'=>1])}','500','500')">注册送设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/duanxinsongsheding',['id'=>1])}','500','500')">短信送设定</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/tongji',['id'=>1])}','500','300')">统计</button>
+                    <a href="{:url('Accounts/chazhang')}"><button type="button" class="btn btn-warning">查账</button></a>
+                    <a href="{:url('Accounts/quxian')}"><button type="button" class="btn btn-warning">曲线</button></a>
+                    <button type="button" class="btn btn-warning" onclick="member_del('{:url('user/deleteUser',['id'=>1,'status'=>-1])}')">禁用</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/xiugaimima',['id'=>1])}','500','300')">修改密码</button>
+                </td>
+                <td><button type="button" class="btn" onclick="member_edit('编辑','{:url('Accounts/tableedit',['id'=>1])}','500','250')">N/A</button></td>
             </tr>
             <tr>
-            	<td>02.06.2010</td>
-                <td>15:00</td>
-                <td>15:00</td>
-                <td>17:00</td>
-                <td>Rest</td>
+                <td>1</td>
+                <td>10:00</td>
+                <td><span class="label label-success radius">yes</span></td>
+                <td>10:00</td>
+                <td>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/gongnengsheding',['id'=>1])}','500','300')">功能设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/zhucesongsheding',['id'=>1])}','500','500')">注册送设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/duanxinsongsheding',['id'=>1])}','500','500')">短信送设定</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/tongji',['id'=>1])}','500','300')">统计</button>
+                    <a href="{:url('Accounts/chazhang')}"><button type="button" class="btn btn-warning">查账</button></a>
+                    <a href="{:url('Accounts/quxian')}"><button type="button" class="btn btn-warning">曲线</button></a>
+                    <button type="button" class="btn btn-warning" onclick="member_del('{:url('user/deleteUser',['id'=>1,'status'=>-1])}')">禁用</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/xiugaimima',['id'=>1])}','500','300')">修改密码</button>
+                </td>
+                <td><button type="button" class="btn" onclick="member_edit('编辑','{:url('Accounts/tableedit',['id'=>1])}','500','250')">N/A</button></td>
             </tr>
             <tr>
-            	<td>02.06.2010</td>
-                <td>17:00</td>
-                <td>17:00</td>
-                <td>21:00</td>
-                <td>Work</td>
-            </tr>
-            <tr>
-            	<td>02.06.2010</td>
-                <td>21:00</td>
-                <td>21:00</td>
-                <td>07:00</td>
-                <td>Sleep</td>
+                <td>1</td>
+                <td>10:00</td>
+                <td><span class="label label-success radius">yes</span></td>
+                <td>10:00</td>
+                <td>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/gongnengsheding',['id'=>1])}','500','300')">功能设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/zhucesongsheding',['id'=>1])}','500','500')">注册送设定</button>
+                    <button type="button" class="btn btn-info" onclick="member_edit('编辑','{:url('Accounts/duanxinsongsheding',['id'=>1])}','500','500')">短信送设定</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/tongji',['id'=>1])}','500','300')">统计</button>
+                    <a href="{:url('Accounts/chazhang')}"><button type="button" class="btn btn-warning">查账</button></a>
+                    <a href="{:url('Accounts/quxian')}"><button type="button" class="btn btn-warning">曲线</button></a>
+                    <button type="button" class="btn btn-warning" onclick="member_del('{:url('user/deleteUser',['id'=>1,'status'=>-1])}')">禁用</button>
+                    <button type="button" class="btn btn-warning" onclick="member_edit('编辑','{:url('Accounts/xiugaimima',['id'=>1])}','500','300')">修改密码</button>
+                </td>
+                <td><button type="button" class="btn" onclick="member_edit('编辑','{:url('Accounts/tableedit',['id'=>1])}','500','250')">N/A</button></td>
             </tr>
         </tbody>
 	</table>
 </div>
     </div>
 </div>
-{include file="public/footer"}
+
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -151,27 +177,5 @@
         </div><!-- /.modal-content -->
     </div>
 </div>
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    模态框（Modal）标题
-                </h4>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" id="name" placeholder="请输入名称">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
-                </button>
-                <button type="button" class="btn btn-primary">
-                    提交更改
-                </button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
+<script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui/js/H-ui.js"></script>
+{include file="public/footer"}
